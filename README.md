@@ -1,10 +1,16 @@
-# CooperDrive
+# CooperDrive: Enhancing Driving Decisions Through Cooperative Perception
 
-Project page:
-https://DarrenQu.github.io/CooperDrive/
+**Accepted to IEEE International Conference on Robotics and Automation (ICRA) 2026**
 
-Paper:
-Coming soon
+<p align="left">
+  <a href="https://arxiv.org/abs/XXXX.XXXXX">
+    <img src="https://img.shields.io/badge/Paper-ArXiv-b31b1b.svg" alt="Paper">
+  </a>
+  <a href="https://DarrenQu.github.io/CooperDrive/">
+    <img src="https://img.shields.io/badge/Project-Page-blue.svg" alt="Project Page">
+  </a>
+</p>
 
-Demo:
-Coming soon
+Project page: [https://DarrenQu.github.io/CooperDrive/](https://DarrenQu.github.io/CooperDrive/)
+
+![CooperDrive Main Figure](assets/figure1.png)
