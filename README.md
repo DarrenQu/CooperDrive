@@ -11,6 +11,4 @@
   </a>
 </p>
 
-Project page: [https://DarrenQu.github.io/CooperDrive/](https://DarrenQu.github.io/CooperDrive/)
-
 ![CooperDrive Main Figure](assets/figure1.png)
