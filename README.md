@@ -11,4 +11,4 @@
   </a>
 </p>
 
-![CooperDrive Main Figure](assets/figure1.png)
+![CooperDrive Main Figure](assets/figure1.jpg)
