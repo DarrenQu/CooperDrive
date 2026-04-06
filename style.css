@@ -210,7 +210,10 @@ a {
   border: none;
   box-shadow: var(--shadow);
 }
-
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
 .metric-value {
   font-size: 32px;
   font-weight: 800;
