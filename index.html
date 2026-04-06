@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CooperDrive: Enhancing Driving Decisions Through Cooperative Perception</title>
-  <meta name="description" content="CooperDrive is a cooperative perception framework that enhances driving decisions in occlusion-heavy and non-line-of-sight scenarios with lightweight object-level sharing and low latency." />
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
   <div class="page">
     <header class="hero">
-      <p class="eyebrow">Project Page</p>
       <h1>CooperDrive</h1>
       <p class="subtitle">Enhancing Driving Decisions Through Cooperative Perception</p>
 
@@ -24,34 +14,24 @@
       <p class="affiliations">Toyota Motor North America, InfoTech Labs</p>
 
       <div class="button-row">
-        <!-- Replace the links below as needed -->
-        <a class="button primary" href="assets/CooperDrive_paper.pdf">Paper</a>
-        <a class="button" href="#video">Demo</a>
-        <a class="button" href="#bibtex">BibTeX</a>
-        <a class="button" href="#contact">Contact</a>
+        <!-- Replace the href links below as needed -->
+        <a class="button primary" href="#">ICRA 2026</a>
+        <a class="button" href="#">ITS World Congress 2025 Toyota Web Exhibition</a>
       </div>
     </header>
 
     <section class="section" id="video">
-      <h2>Demo Video</h2>
+      <h2>Real-Vehicle Demo</h2>
       <div class="card">
         <video class="demo-video" controls preload="metadata" poster="assets/video_poster.png">
           <source src="assets/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p class="caption">Drop your demo file into <code>assets/video.mp4</code> and it will play here automatically.</p>
+        <p class="caption">
+          Real-world closed-loop deployment of CooperDrive in occlusion-heavy and non-line-of-sight intersection scenarios.
+          Compared with ego-only perception, cooperative perception enables earlier hazard awareness and safer path planning decisions.
+        </p>
       </div>
-    </section>
-    
-    <section class="section teaser">
-      <div class="teaser-frame">
-        <object data="assets/figure1.pdf" type="application/pdf" class="pdf-figure">
-          <img src="assets/figure1.png" alt="CooperDrive main figure" class="teaser-image" />
-        </object>
-      </div>
-      <p class="caption">
-        CooperDrive augments situational awareness in occlusion-heavy and non-line-of-sight intersections, enabling earlier and safer driving decisions through lightweight cooperative perception.
-      </p>
     </section>
 
     <section class="metrics-strip">
@@ -73,49 +53,45 @@
       </div>
     </section>
 
-    <section class="section" id="abstract">
-      <h2>Abstract</h2>
-      <div class="card prose">
-        <p>
-          Autonomous vehicles equipped with robust onboard perception, localization, and planning still face limitations in occlusion and non-line-of-sight (NLOS) scenarios, where delayed reactions can increase collision risk. We propose CooperDrive, a cooperative perception framework that augments situational awareness and enables earlier, safer driving decisions. CooperDrive offers two key advantages: (i) each vehicle retains its native perception, localization, and planning stack, and (ii) a lightweight object-level sharing and fusion strategy bridges perception and planning.
-        </p>
-        <p>
-          Specifically, CooperDrive reuses detector Bird’s-Eye View (BEV) features to estimate accurate vehicle poses without additional heavy encoders, thereby reconstructing BEV representations and feeding the planner with low latency. On the planning side, CooperDrive leverages the expanded object set to anticipate potential conflicts earlier and adjust speed and trajectory proactively, thereby transforming reactive behaviors into predictive and safer driving decisions.
-        </p>
-        <p>
-          Real-world closed-loop tests at occlusion-heavy NLOS intersections demonstrate that CooperDrive increases reaction lead time, minimum time-to-collision (TTC), and stopping margin, while requiring only ~90 kbps bandwidth and maintaining an average end-to-end latency of 89 ms.
-        </p>
+    <section class="section" id="method">
+      <h2>Method</h2>
+      <div class="teaser-frame">
+        <object data="assets/figure1.pdf" type="application/pdf" class="pdf-figure">
+          <img src="assets/figure1.png" alt="CooperDrive method overview" class="teaser-image" />
+        </object>
       </div>
+      <p class="caption">
+        CooperDrive combines multi-task BEV perception, semantic localization, cooperative object sharing, and downstream path planning
+        in a unified framework for real-world deployable cooperative driving.
+      </p>
     </section>
 
-    <section class="section">
-      <h2>Why CooperDrive</h2>
-      <div class="grid three">
-        <div class="card">
-          <h3>Native stack preserved</h3>
-          <p>Each vehicle keeps its own perception, localization, and planning stack. Cooperative information enhances decisions without forcing a new driving architecture.</p>
-        </div>
-        <div class="card">
-          <h3>Lightweight sharing</h3>
-          <p>CooperDrive exchanges compact object-level information instead of raw sensor data or heavy BEV features, keeping bandwidth practical for real vehicles.</p>
-        </div>
-        <div class="card">
-          <h3>Planning-aware benefit</h3>
-          <p>The expanded object set helps the planner anticipate conflicts earlier, shifting behavior from reactive to predictive in occluded intersections.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="section" id="highlights">
       <h2>Highlights</h2>
       <div class="grid two">
         <div class="card">
           <h3>Multi-task BEV perception</h3>
-          <p>CooperDrive reuses detector BEV features for localization, avoiding additional heavy encoders while still producing accurate vehicle poses and low-latency BEV reconstruction.</p>
+          <p>
+            A shared BEV backbone jointly supports 3D object detection and semantic localization, improving efficiency and consistency.
+          </p>
         </div>
         <div class="card">
-          <h3>Real-world deployment</h3>
-          <p>The framework is validated through closed-loop real-vehicle tests at occlusion-heavy NLOS intersections, demonstrating practical safety gains under communication constraints.</p>
+          <h3>Semantic localization</h3>
+          <p>
+            Earlier BEV features are reused to estimate accurate vehicle poses in a shared world frame, enabling reliable multi-agent alignment.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Lightweight sharing</h3>
+          <p>
+            CooperDrive exchanges compact object-level results instead of raw sensor data or heavy BEV features, making communication practical for real vehicles.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Planning-aware benefit</h3>
+          <p>
+            Cooperative perception directly improves downstream planning by revealing occluded hazards earlier, without changing the existing planner architecture.
+          </p>
         </div>
       </div>
     </section>
@@ -157,51 +133,38 @@
             </tr>
           </tbody>
         </table>
+
         <p class="table-note">
-          Across real-world test scenarios, cooperative perception consistently improves safety margin and planning smoothness.
+          Across all tested scenarios, cooperative perception improves safety margin and enables earlier, less aggressive planning maneuvers.
         </p>
+
+        <div class="prose" style="margin-top: 1.2rem;">
+          <p><strong>Metric definitions.</strong></p>
+          <ul class="bullet-list">
+            <li><strong>TTCmin</strong>: shortest predicted time to a potential collision. Higher is safer.</li>
+            <li><strong>DRAC</strong>: minimum deceleration required to avoid a crash. Lower is safer and smoother.</li>
+            <li><strong>DCZ</strong>: shortest distance to a predicted conflict zone. Higher indicates a larger safety margin.</li>
+            <li><strong>VR</strong>: percentage of planning steps that violate safety constraints. Lower is better.</li>
+          </ul>
+        </div>
       </div>
     </section>
-
-    <section class="section">
-      <h2>System Summary</h2>
-      <div class="card prose">
-        <ul class="bullet-list">
-          <li>Robust per-vehicle detection and localization in a shared world frame</li>
-          <li>Object-level fusion between cooperative agents for practical communication efficiency</li>
-          <li>Direct benefit to a standard hierarchical planner without changing the planner architecture</li>
-          <li>Low-latency operation suitable for safety-critical driving scenarios</li>
-        </ul>
-      </div>
-    </section>
-
-
 
     <section class="section" id="bibtex">
       <h2>BibTeX</h2>
       <div class="card code-card">
-<pre><code>@misc{qu2026cooperdrive,
-  title        = {CooperDrive: Enhancing Driving Decisions Through Cooperative Perception},
-  author       = {Deyuan Qu and Qi Chen and Takayuki Shimizu and Onur Altintas},
-  year         = {2026},
-  note         = {Project page},
-  howpublished = {GitHub Pages}
+        <p>If you find our work useful in your research, please cite our paper:</p>
+<pre><code>@inproceedings{qu2026cooperdrive,
+  title     = {CooperDrive: Enhancing Driving Decisions Through Cooperative Perception},
+  author    = {Deyuan Qu and Qi Chen and Takayuki Shimizu and Onur Altintas},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2026}
 }</code></pre>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <h2>Contact</h2>
-      <div class="card prose center">
-        <p>For questions regarding CooperDrive, please contact the authors at Toyota Motor North America / InfoTech Labs.</p>
-        <p><a href="mailto:deyuan.qu@toyota.com">deyuan.qu@toyota.com</a></p>
-      </div>
-    </section>
-
     <footer class="footer">
-      <p>Built as a lightweight academic project page for GitHub Pages.</p>
-      <p class="footer-note">To publish: push this folder to a repository named <strong>cooperdrive</strong> and enable GitHub Pages from the <strong>main</strong> branch root.</p>
+      <p>© 2026 CooperDrive</p>
     </footer>
   </div>
 </body>
-</html>
