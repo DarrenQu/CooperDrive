@@ -325,13 +325,14 @@ tbody tr:last-child td {
 } */
 pre {
   margin: 0;
-  padding: 0;
+  padding: 16px 18px;
   overflow-x: auto;
-  border-radius: 0;
-  background: transparent;
+  border-radius: 14px;
+  background: #f8fafc;
   color: #334155;
   font-size: 14px;
   line-height: 1.55;
+  border: 1px solid #e5eaf3;
   box-shadow: none;
 }
 
