@@ -121,14 +121,14 @@ a {
 .text-blue-button {
   background: transparent !important;
   color: var(--blue) !important;
-  border: none !important;
+  border: 1px solid #c7d2e5 !important;
   box-shadow: none !important;
 }
 
 .text-blue-button:hover {
   background: transparent !important;
   color: var(--blue-dark) !important;
-  border: none !important;
+  border: 1px solid #94a3b8 !important;
   box-shadow: none !important;
   transform: none !important;
 }
