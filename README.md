@@ -3,7 +3,7 @@
 **Accepted to IEEE International Conference on Robotics and Automation (ICRA) 2026**
 
 <p align="left">
-  <a href="https://arxiv.org/abs/XXXX.XXXXX">
+  <a href="https://arxiv.org/pdf/2604.14454">
     <img src="https://img.shields.io/badge/Paper-ArXiv-b31b1b.svg" alt="Paper">
   </a>
   <a href="https://DarrenQu.github.io/CooperDrive/">
